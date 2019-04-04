@@ -2,17 +2,36 @@
 
 ## Commandments
 
-the outer `<svg>` must have a H x W defined somewhere
+I the outer `<svg>` must have a H x W defined somewhere
 
-circles should always be scaled by area, not by radius value
+II circles should always be scaled by area, not by radius value
 
-1. select an element in the DOM
-2. append an svg to it
+III select an element in the DOM, then append an svg to it
 
 ### 3 forms of DataVis
 1. exploring data - discover something new
 2. analyzing data - testing a theory about the state of the world
 3. presenting data - communicating something to others
+
+## Quick Start
+### index.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/d3@^5.9"></script>
+  <script src="https://unpkg.com/topojson@^3.0"></script>
+  <title>CHANGE ME</title>
+</head>
+<body>
+  <div id="container">
+	<div id="svg-area"> </div>    
+  </div>
+</body>
+</html>
+'''
+
 
 ### d3.csv 
 takes .csv file and parses/returns 1 obj per row, so d === array of objects
@@ -376,7 +395,10 @@ d3.max(dataset, function(d) {
   });
 
 ```
-
+### Plugins
+```
+<script src="https://unpkg.com/d3-geo-scale-bar@0.2.0/build/d3-geo-scale-bar.js"></script>
+```
 
 ## Refs
 ### javascript
