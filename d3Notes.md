@@ -4,23 +4,10 @@
 
 the outer `<svg>` must have a H x W defined somewhere
 
+circles should always be scaled by area, not by radius value
+
 1. select an element in the DOM
 2. append an svg to it
-
-```
-d3.csv('fruit.csv').then(function(data){
-    data.forEach(function(d){
-      d.quantity = +d.quantity,
-      d.cost_per_unit = +d.cost_per_unit;
-    })
-  }(function(error){
-    console.log(error);
-  });  
-```
-
-j refers to the index of the parent data element
-
-circles should always be scaled by area, not by radius value
 
 ### 3 forms of DataVis
 1. exploring data - discover something new
@@ -56,6 +43,17 @@ d3.csv(csvUrl, function(d) {
 "Naples",1000000,"Italy",14,40
 "Rio",12300000,"Brazil",-43,-22
 "Sao Paolo",12300000,"Brazil",-46,-23
+```
+### csv with forEach
+```
+d3.csv('fruit.csv').then(function(data){
+    data.forEach(function(d){
+      d.quantity = +d.quantity,
+      d.cost_per_unit = +d.cost_per_unit;
+    })
+  }(function(error){
+    console.log(error);
+  });  
 ```
 
 ## Scales
