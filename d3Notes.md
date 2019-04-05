@@ -2,11 +2,11 @@
 
 ## Commandments
 
-I the outer `<svg>` must have a H x W defined somewhere
+I. the outer `<svg>` must have a H x W defined somewhere
 
-II circles should always be scaled by area, not by radius value
+II. circles should always be scaled by area, not by radius value
 
-III select an element in the DOM, then append an svg to it
+III. select an element in the DOM, then append an svg to it
 
 ### 3 forms of DataVis
 1. exploring data - discover something new
@@ -510,6 +510,8 @@ d3.max(dataset, function(d) {
 [Open Refine Links](http://kb.refinepro.com/search/label/data%20exploration)
 
 ### Design
+[WSJ Graphics](https://graphics.wsj.com/)
+
 [Sunlight DataVis Style Guide](https://github.com/amycesal/dataviz-style-guide/blob/master/Sunlight-StyleGuide-DataViz.pdf)
 
 [Reddit Data is Beautiful](https://www.reddit.com/r/dataisbeautiful)
