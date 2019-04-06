@@ -570,6 +570,8 @@ d3.max(dataset, function(d) {
 
 [State MapGive](https://www.mapgive.state.gov/)
 
+[Tasking Manager for OpenStreetMaps](https://tasks.hotosm.org/)
+
 * GeoJSON (a JSON-based format for specifying geographic data)
 * projections (functions that convert from lat/long co-ordinates to x & y co-ordinates)
 * geographic path generators (functions that convert GeoJSON shapes into SVG)
