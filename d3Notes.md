@@ -576,6 +576,8 @@ d3.max(dataset, function(d) {
 
 [HillShade Tutorial](https://observablehq.com/@awoodruff/diy-hillshade)
 
+[GDAL Vector Contour Lines from Raster Source](https://www.gdal.org/gdal_contour.html)
+
 * GeoJSON (a JSON-based format for specifying geographic data)
 * projections (functions that convert from lat/long co-ordinates to x & y co-ordinates)
 * geographic path generators (functions that convert GeoJSON shapes into SVG)
