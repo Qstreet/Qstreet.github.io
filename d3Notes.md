@@ -573,6 +573,8 @@ d3.max(dataset, function(d) {
 
 ## Mapping
 
+[Zoom Levels](https://wiki.openstreetmap.org/wiki/Zoom_levels)
+
 [State MapGive](https://www.mapgive.state.gov/)
 
 [Tasking Manager for OpenStreetMaps](https://tasks.hotosm.org/)
