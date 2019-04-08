@@ -25,8 +25,10 @@ III. select an element in the DOM, then append an svg to it
   <title>CHANGE ME</title>
 </head>
 <body>
-  <div id="container">
-	<div id="svg-area"> </div>    
+ <div class="container">
+    <div class="row">
+      <div id="svgCanvas"></div>
+    </div>
   </div>
   <script>
   var margin = {top: 20, right: 10, bottom: 20, left: 10 };
