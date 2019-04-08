@@ -774,16 +774,19 @@ text.enter()
 .text(function(d){ return d });
 ```
 
-### Interval fn to loop code
+### Interval fn to loop code with flag
+#### flag variable
+`var flag = true;`
+`flag = !flag;`
 
 ```
 d3.interval(function(){
-    console.log('hello world');
+  update(data)	
+  flag = !flag
   }, 1000);
 ```
 
-
-
+`var value = flag ? "revenue" : "profit";`
 
 ### Tool Tip
 
