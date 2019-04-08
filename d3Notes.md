@@ -31,15 +31,47 @@ III. select an element in the DOM, then append an svg to it
     </div>
   </div>
   <script>
-  var margin = {top: 20, right: 10, bottom: 20, left: 10 };
-	
-  var width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-  var svg = d3.select("#svgCanvas").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var margin = { top: 20, right: 10, bottom: 20, left: 10 };
+
+var width = 600 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
+
+var svg = d3
+  .select("#svgCanvas")
+  .append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+const urlJson =
+  "file-topo.json";
+
+d3
+  .json(urlJson).then(function(data) {
+    data.forEach(function(d) {
+      d.height = +d.height;
+    });
+
+    console.log(data);
+
+    svg
+      .selectAll("rect").data(data).enter().append("rect")
+      .attr("x", function(d, i) {
+        return i * 25;
+      })
+      .attr("y", function(d, i) {
+        return (height - d.height)
+      })
+      .attr("width", 15)
+      .attr("height", function(d,i){
+      return d.height
+    })
+      .attr("fill", "blue");
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
   </script>
 </body>
 </html>
