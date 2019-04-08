@@ -777,10 +777,13 @@ text.enter()
 ### Interval fn to loop code
 
 ```
-    d3.interval(function(){
-        // code goes here
-    }, 1000);
+d3.interval(function(){
+    console.log('hello world');
+  }, 1000);
 ```
+
+
+
 
 ### Tool Tip
 
