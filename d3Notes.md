@@ -29,7 +29,15 @@ III. select an element in the DOM, then append an svg to it
 	<div id="svg-area"> </div>    
   </div>
   <script>
-  	d3.json('file.json').then(function(data){ });
+  var margin = {top: 20, right: 10, bottom: 20, left: 10 };
+	
+  var width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+  var svg = d3.select("#svgCanvas").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   </script>
 </body>
 </html>
