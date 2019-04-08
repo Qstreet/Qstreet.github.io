@@ -158,6 +158,8 @@ let nationToColor = d3.scaleOrdinal()
 ```
 
 ### d3.scaleBand
+#### use to space out bar charts
+
 ```
 let dataBand = d3.scaleBand()
   .domain(["AF", "EAP", "SCA", "WHA", "EUR", "NEA" ])
