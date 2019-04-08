@@ -774,6 +774,17 @@ text.enter()
 .text(function(d){ return d });
 ```
 
+- Merge updates enter and update at same time
+```
+rects.enter().append('rect')
+    .attr('fill','grey')
+    .attr('y',y(0))
+    .attr('height',0)
+  .merge(rects)
+    .transition(t)
+    .attr('x',function...)
+```
+
 ### Interval fn to loop code with flag
 #### flag variable
 `var flag = true;`
