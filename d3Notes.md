@@ -139,9 +139,9 @@ min blue . rgb(0,0,255)
 max red rgb(255,0,0)
 
 ### d3.scaleOrdinal
-Ordinal scale domains and ranges are always made up of array values
+#### Use to match string value x to color value y
 
-almost always, string value x to color value y
+Ordinal scale domains and ranges are always made up of array values
 
 ```
 let nationToColor = d3.scaleOrdinal()
