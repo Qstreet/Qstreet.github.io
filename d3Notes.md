@@ -244,7 +244,7 @@ timeScale(new Date(2017, 0, 1));   // returns 700
 scaleSqrt is useful for sizing circles by area (rather than radius)
 
 ### scaleLog()
-cannot have a .domain with 0. the domain ends must be something other than 0.
+cannot have a .domain with 0. range can have a 0.
 
 ## Axes
 d3 axes are functions whose parameters you define. Scales return values but don't append to the screen.
