@@ -1,9 +1,4 @@
-var margin = {
-      top: 20,
-      right: 10,
-      bottom: 20,
-      left: 10
-    };
+var margin = { top: 20, right: 10, bottom: 20, left: 10 };
     var width = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
     var svgMain = d3.select("svgCanvas").append("svg")
