@@ -47,10 +47,6 @@ let promises = [d3.json(urlJson)
       .catch(function(error) {
         console.log(error);
       });
-  </script>
-</body>
-
-</html>
 
 
 /*
