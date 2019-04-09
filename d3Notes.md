@@ -403,17 +403,6 @@ let newArr = arr.map((v,i,a) => {
 });
 // newArr = [1,4,3,8];
 ```
-alternate:
-```
-let newArr = arr.map((v,i,a) => {
-  if (v % 2 === 0){
-    return v * 2;
-  } else {
-    return v;
-  }
-});
-// newArr = [1,4,3,8];
-```
 
 1. check if the value divided by two has a remainder of zero (odd v even)
 2. If remainder is zero (even) return v * 2 or double the current value
