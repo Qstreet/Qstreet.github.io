@@ -651,6 +651,8 @@ d3.max(dataset, function(d) {
 
 ## Shapfiles and GeoJson
 
+[Geonames Database](http://www.geonames.org/)
+
 [Europa Maps](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)
 
 [Zoom Levels](https://wiki.openstreetmap.org/wiki/Zoom_levels)
