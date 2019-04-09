@@ -19,6 +19,9 @@ III. select an element in the DOM, then append an svg to it
 3. presenting data - communicating something to others
 
 ## Quick Start
+### Node Server
+`http-server ~/code/nodeServer`
+
 ### index.html
 ```
 <!DOCTYPE html>
