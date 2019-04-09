@@ -353,7 +353,7 @@ var min = d3.min(data, function(d){ return d.value; })
 - The map() method is used to apply a function on every element in an array. A new array is returned.
 - depending on structure, the original array can be changed (ex.3)
 
-#### equivilent for loop
+#### equivilent forLoop
 ```
 let startHike= [96, 84, 92, 98, 94];
 let summit = [];
@@ -431,6 +431,26 @@ var grade_map = data.map(function(d){ return d.grade }) => ["A","B","C"]
 var x = d3.scaleBand().domain(data.map(function(d){ return d.grade; })
 	.range()
 ```
+
+### ex.4 key-value pair
+```
+let startHike= [
+  {name:"dave", water: 86},
+  {name:"andrea", water: 56},
+  {name:"maria", water: 42},
+  {name:"nico", water: 60},
+  {name:"will", water: 36},
+];
+ 
+let summit = startHike.map(function(hikerEnergy){
+  let waterLevel = hikerEnergy['water'];
+  return waterLevel;
+});
+ 
+// summit => [86, 56, 42, 60, 36]
+```
+
+
 ### filter
 
 filter() method returns a new array created from all elements that pass a certain test preformed on an original array.
