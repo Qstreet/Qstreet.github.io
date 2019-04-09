@@ -649,7 +649,9 @@ d3.max(dataset, function(d) {
 
 [MapServer Open src mapping](https://mapserver.org/index.html)
 
-## Mapping
+## Shapfiles and GeoJson
+
+[Europa Maps](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)
 
 [Zoom Levels](https://wiki.openstreetmap.org/wiki/Zoom_levels)
 
