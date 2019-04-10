@@ -184,10 +184,19 @@ let dataBand = d3.scaleBand()
 [d3 API Time Format](https://github.com/d3/d3-time-format/blob/master/README.md#d3-time-format)
 
 ### Parse and Format Date/Time
+To convert a string from a csv or json create a parser
+'''
+const parseTime =
+      d3.timeParse("%m/%d/%Y %H:%M");
 
-To format a date, create a formatter from a specifier (a string with the desired format directives, indicated by %); then pass a date to the formatter, which returns a string.
+d3.csv(urlCsv).then(function(dataCsv){
+  dataCsv.forEach(function(d){
+    d.DateTime = parseTime(d.DateTime);
+  });
+  
+'''
 
-To convert the current date to a human-readable string:
+To convert the js date object a human-readable string:
 
 ```
 var formatTime = d3.timeFormat("%B %d, %Y");
