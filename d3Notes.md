@@ -213,8 +213,8 @@ xScale = d3.scaleTime()
 .range([padding, w - padding]);
 
 
-var dateFormat = d3.time.format("%Y-%m-%d");
-var timeScale = d3.time.scale()
+var dateFormat = d3.timeFormat("%Y-%m-%d");
+var timeScale = d3.timeScale()
         .domain([d3.min(taskArray, function(d) {return dateFormat.parse(d.startTime);}),
                  d3.max(taskArray, function(d) {return dateFormat.parse(d.endTime);})])
         .range([0,w-150]);
