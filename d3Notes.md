@@ -60,7 +60,7 @@ const urlJson = "file-topo.json";
 // axes
 
 let promises = [
-  d3.json("path/data.json", function(d) {
+  d3.json("path/data.json", function(d) {     // d3.json returns single obj. csv returns array
     return {
       year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
       make: d.Make,
