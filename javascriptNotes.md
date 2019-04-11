@@ -44,3 +44,13 @@ GeoJSON can store points in geographical space (typically as longitude/latitude 
     ]
 }
 ```
+```
+if (test) {
+    // code to run if true
+};
+```
+```
+for (var i = 0; i < 5; i++) {
+    console.log(i);  //Prints value to console
+}
+```
