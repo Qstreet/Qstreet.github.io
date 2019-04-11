@@ -18,6 +18,10 @@ III. select an element in the DOM, then append an svg to it
 2. analyzing data - testing a theory about the state of the world
 3. presenting data - communicating something to others
 
+## Sort me!
+### Combining Data
+http://learnjsdata.com/combine_data.html
+
 ## Quick Start
 ### Node Server
 `http-server ~/code/nodeServer`
