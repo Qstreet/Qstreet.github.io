@@ -39,6 +39,7 @@ III. select an element in the DOM, then append an svg to it
     </div>
   </div>
   <script>
+  
 var margin = { top: 20, right: 10, bottom: 20, left: 10 };
 
 var width = 600 - margin.left - margin.right,
@@ -52,23 +53,39 @@ var svg = d3
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-const urlJson =
-  "file-topo.json";
+const urlJson = "file-topo.json";
 
 // scales
 // lables
 // axes
 
-d3.json(urlJson, function(d) {
-  return {
-    year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
-    make: d.Make,
-    model: d.Model,
-    length: +d.Length // convert "Length" column to number
-  };
-}).then(function(data) {
-  console.log(data);
-});
+let promises = [
+  d3.json("path/data.json", function(d) {
+    return {
+      year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
+      make: d.Make,
+      model: d.Model,
+      length: +d.Length // convert "Length" column to number
+    };
+  }),
+  d3.csv("path/csvDat.csv", function(d) {
+    return {
+      year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
+      make: d.Make,
+      model: d.Model,
+      length: +d.Length // convert "Length" column to number
+    };
+  })
+]; // close promises array
+
+Promise.all(promises)
+  .then(function(allData) {
+    let map = allData[0];
+    let otherData = allData[1];
+
+    console.log(map);
+    console.log(otherData);
+  })
   .catch(function(error) {
     console.log(error);
   });
@@ -77,6 +94,52 @@ d3.json(urlJson, function(d) {
 </html>
 ```
 
+```
+document.getElementById("graphic").textContent = "hi"
+```
+
+```
+folks = [{name:"Stewart",age:58},{name:"Jack",age:11},{name:"Nate",age:13},{name:"Leah",age:45}, {name:"Chai",age:2}];
+var months = ['March', 'Jan', 'Feb', 'Dec', 'Oct', 'May'];
+```
+
+```
+.style("color", function(d) { 
+    if (d > 15)
+    { 
+       return "red"; 
+    } 
+    else 
+    {
+      return "black";
+    }
+ });
+```
+
+adjust radius of pie or cirlce to smaller of 2 dimensions
+
+```
+const radius = Math.min(width, height) / 2;
+```
+
+```
+let newNumber = Math.floor(Math.random() * 30);
+
+.attr("x", (d, i) { return i * (w / dataset.length);})
+
+.attr("width", w / dataset.length - barPadding)
+
+invert y value of bars
+height of the SVG and the corresponding data value
+.attr("y", function(d) {  return hOfSvg - d; })
+
+To put the “bottom” of the bar on the bottom of the SVG each rect’s height can be just the data value itself:
+.attr("height", function(d) { return d; });
+
+d3.max(dataset, function(d) { 
+  return d[0]; 
+  });
+```
 
 ### d3.csv 
 takes .csv file and parses/returns 1 obj per row, so d === array of objects
@@ -753,75 +816,6 @@ bigG.append('text')
     </div>
 ```
 
-#### promises
-```
-let promises = [
-	d3.json('path/data.json'),
-	d3.csv('path/csvDat.csv')
-]
-
-Promise.all(promises).then(function(allData){
-	let map = allData[0];
-	let otherData = allData[1];
-
-	console.log(map);
-	console.log(otherData);
-
-}).catch(function(error) {
-	console.log(error);
-});
-```
-   
-<!-- Citation   -->
-<!-- http://worldpopulationreview.com/countries/dr-congo-population/   -->
-
-```
-document.getElementById("graphic").textContent = "hi"
-```
-
-```
-folks = [{name:"Stewart",age:58},{name:"Jack",age:11},{name:"Nate",age:13},{name:"Leah",age:45}, {name:"Chai",age:2}];
-var months = ['March', 'Jan', 'Feb', 'Dec', 'Oct', 'May'];
-```
-
-```
-.style("color", function(d) { 
-    if (d > 15)
-    { 
-       return "red"; 
-    } 
-    else 
-    {
-      return "black";
-    }
- });
-```
-
-adjust radius of pie or cirlce to smaller of 2 dimensions
-
-```
-const radius = Math.min(width, height) / 2;
-```
-
-```
-let newNumber = Math.floor(Math.random() * 30);
-
-.attr("x", (d, i) { return i * (w / dataset.length);})
-
-.attr("width", w / dataset.length - barPadding)
-
-invert y value of bars
-height of the SVG and the corresponding data value
-.attr("y", function(d) {  return hOfSvg - d; })
-
-To put the “bottom” of the bar on the bottom of the SVG each rect’s height can be just the data value itself:
-.attr("height", function(d) { return d; });
-
-d3.max(dataset, function(d) { 
-  return d[0]; 
-  });
-
-```
 ### Plugins
 ```
 <script src="https://unpkg.com/d3-geo-scale-bar@0.2.0/build/d3-geo-scale-bar.js"></script>
@@ -1366,6 +1360,8 @@ Within anonymous functions, D3 automatically sets the context of this so it refe
 Sources:
 Armed Conflict Location & Event Data Project (ACLED); acleddata.com
 
+<!-- Citation   -->
+<!-- http://worldpopulationreview.com/countries/dr-congo-population/   -->
 
 ## Functions and Methods
 
@@ -1492,6 +1488,7 @@ selection.on('mouseenter', (d, i, nodes) => {
 Perhaps not quite as elegant, but it lets us keep the best of both worlds and avoid inconsistent function definition syntax. Note that this still points to the DOM element if we choose to use the “classic” function definition as before.
 
 ===
+### forEach
 
 forEach can be used to iterate over the data array.
 
@@ -1504,72 +1501,6 @@ d3.csv("/data/cities.csv").then(function(data) {
 });
 
 => {city: "seattle", state: "WA", population: 652405, land area: 83.9}
-
-Alternate method by d3.csv directly. Done by providing an accessor function to d3.csv, whose return value will be the individual data objects in our data array.
-
-d3.csv("/data/cities.csv", function(d) {
-  return {
-    city : d.city,
-    state : d.state,
-    population : +d.population,
-    land_area : +d["land area"]
-  };
-}).then(function(data) {
-  console.log(data[0]);
-});
-
-=> {city: "seattle", state: "WA", population: 652405, land_area: 83.9}
-
-Reading JSON Files
-
-employees.json
-
-[
- {"name":"Andy Hunt",
-  "title":"Big Boss",
-  "age": 68,
-  "bonus": true
- },
- {"name":"Charles Mack",
-  "title":"Jr Dev",
-  "age":24,
-  "bonus": false
- }
-]
-
-d3.json("/data/employees.json").then(function(data) {
-  console.log(data[0]);
-});
-
-=> {name: "Andy Hunt", title: "Big Boss", age: 68, bonus: true}
-
-Loading Multiple Files/Datasets with PROMISES
-
-
-Promise.all([
-  d3.csv("/data/cities.csv"),
-  d3.tsv("/data/animals.tsv")
-]).then(function(data) {  														// I believe you can also assign respective name. citiesData, animalsData
-  console.log(data[0][0])  // first row of cities
-  console.log(data[1][0])  // first row of animals
-});
-
-=> {city: "seattle", state: "WA", population: "652405", land area: "83.9"}
-
-{name: "tiger", type: "mammal", avg_weight: "260"}
-
-The method returns an array of our data sources. The first item returns our cities; the second, our animals.
-
-===
-
-//  CSV Data Row Conversion
-//Function for converting CSV values from strings to Dates and numbers
-var rowConverter = function(d) { 
-	return {
-  	Date: parseTime(d.Date),
-    Amount: parseInt(d.Amount)
-  };
-}
 
 ===
 
