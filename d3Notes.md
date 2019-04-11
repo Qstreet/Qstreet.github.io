@@ -85,6 +85,11 @@ Promise.all(promises)
 
     console.log(map);
     console.log(otherData);
+    // join
+    // exit/remove
+    // update
+    // enter/merge
+    
   })
   .catch(function(error) {
     console.log(error);
