@@ -1,3 +1,16 @@
+# Best Practices
+## Two ways to avoid Global namespace pollution
+
+1. Declare variables within functions.
+2. Declare a single global object, and attach all otherwise global variables to that object.
+```
+var Vis = {};  //Declare empty global object
+
+Vis.zebras = "still pretty amazing";
+Vis.monkeys = "too funny LOL";
+Vis.fish = "you know, not bad";
+```
+
 # Snippets
 
 ## Objects
