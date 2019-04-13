@@ -22,7 +22,7 @@ III. select an element in the DOM, then append an svg to it
 ### Combining Data
 http://learnjsdata.com/combine_data.html
 
-## Quick Start
+## SNIPETS
 ### Node Server
 `http-server ~/code/nodeServer`
 
@@ -101,6 +101,13 @@ Promise.all(promises)
   </script>
 </body>
 </html>
+```
+### ViewBox
+```
+var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+        .attr("viewBox", `${-width/2} ${-height/2} ${width*2} ${height*2}`)
 ```
 
 ```
