@@ -20,7 +20,7 @@ III. select an element in the DOM, then append an svg to it
 
 ## Sort me!
 ### Combining Data
-http://learnjsdata.com/combine_data.html
+[Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
 
 ## SNIPETS
 ### Node Server
