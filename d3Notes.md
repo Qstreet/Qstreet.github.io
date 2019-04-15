@@ -8,7 +8,6 @@ II. circles should always be scaled by area, not by radius value
 III. select an element in the DOM, then append an svg to it
 
 ### 3 types of data
-1. Quantitative 1,2,0.5,12% 3/4
 2. Categorical  male, female, African, Asian, S. American
 3. Ordinal (ranked)  s, m, l, xl, tall, med, short
 
@@ -892,6 +891,8 @@ bigG.append('text')
 [d3 Examples](https://github.com/emeeks/d3-carto-map)
 
 ### Data
+
+[USAID Data](https://data.usaid.gov/)
 
 [Economist Data Unit](http://data.eiu.com)
 
