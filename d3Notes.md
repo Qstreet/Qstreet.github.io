@@ -911,6 +911,8 @@ return svg.node();
 
 ### Data
 
+[Google DataSet Search](https://toolbox.google.com/datasetsearch)
+
 [CIA Factbook Github](https://github.com/factbook)
 
 [PRIO Data on Armed Conflict](https://www.prio.org/Data/Armed-Conflict/)
