@@ -911,6 +911,8 @@ return svg.node();
 
 ### Data
 
+[NYTimes APIs](https://developer.nytimes.com/)
+
 [Google DataSet Search](https://toolbox.google.com/datasetsearch)
 
 [CIA Factbook Github](https://github.com/factbook)
