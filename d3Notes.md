@@ -911,6 +911,8 @@ return svg.node();
 
 ### Data
 
+[Berkeley Lib Datalab](http://www.lib.berkeley.edu/libraries/data-lab)
+
 [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
 
 [NYTimes APIs](https://developer.nytimes.com/)
