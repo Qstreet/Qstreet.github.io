@@ -17,6 +17,19 @@ III. select an element in the DOM, then append an svg to it
 2. analyzing data - testing a theory about the state of the world
 3. presenting data - communicating something to others
 
+### Line Chart Steps
+1. Add an SVG to draw our line chart on
+2. Use the D3 standard margin convetion
+3. Create an x axis and y axis
+4. Create an x scale and y scale
+5. Create a line generator
+6. Create a random dataset
+7. Create a path object for the line
+8. Bind the data to the path object
+9. Call the line generator on the data-bound path object
+10. Add circles to show each datapoint
+11. Style the chart
+
 ## Sort me!
 ### Combining Data
 [Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
