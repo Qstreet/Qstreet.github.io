@@ -1182,51 +1182,8 @@ returns getJson object from Topojson encoded file
 Returns the GeoJSON Feature or FeatureCollection for the specified object in the given topology. If the specified object is a GeometryCollection, a FeatureCollection is returned, and each geometry in the collection is mapped to a Feature. Otherwise, a Feature is returned. The returned feature is a shallow copy of the source object: they may share identifiers, bounding boxes, properties and coordinates.
 
 ## D3 Update Pattern
-- Join
 
->`.data()` matches in console, ENTER elems to be added, EXIT to be removed, GROUP all those on screen
 
-`let text = g.selectAll('text').data(dataset)`
-
-- Exit/Remove
-
->`.exit()` lists all those in DOM for which there is not a corresponding entry in dataset
-`text.exit().remove();`
->`.remove()` removes them
-
-- Update
-
-> update attributes of DOM elemens which will remain.
-> note lack of .enter() or .append() here. nothing new added, just update existing.
-
-```
-text.attr('class','notNew').attr('fill','red');
-```
-
-- Enter
-
-> create new elems w enter() and append() set attr on new elements
-
-```
-text.enter()
-.append('text')
-.attr('class','enter')
-.attr('x', function(d,i){ return i * 32})
-.attr('y',20)
-.attr('fill','green')
-.text(function(d){ return d });
-```
-
-- Merge updates enter and update at same time
-```
-rects.enter().append('rect')
-    .attr('fill','grey')
-    .attr('y',y(0))
-    .attr('height',0)
-  .merge(rects)
-    .transition(t)
-    .attr('x',function...)
-```
 
 ### Interval fn to loop code with flag
 #### flag variable
