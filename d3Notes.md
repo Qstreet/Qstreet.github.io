@@ -1,5 +1,5 @@
 # REMEMBER: d3 is a DOM manipulation library!
-[#Line Chart Steps]
+[# Line Chart Steps]
 
 ## Commandments
 I. the outer `<svg>` must have a H x W defined somewhere
