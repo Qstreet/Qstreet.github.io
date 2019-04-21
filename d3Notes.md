@@ -909,6 +909,9 @@ return svg.node();
 ### Books on D3
 [D3 for the Impatient](https://learning.oreilly.com/library/view/d3-for-the/9781492046783/)
 
+### Videos
+[Hands-On Data Visualization with D3.js 5.0](https://learning.oreilly.com/videos/hands-on-data-visualization/9781789340594/9781789340594-video3_3)
+
 
 
 ### Reads
