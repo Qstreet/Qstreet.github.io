@@ -950,6 +950,7 @@ return svg.node();
 
 
 ### Data
+[Varieties of Democracy v9](https://www.v-dem.net/en/)
 
 [Berkeley Lib Datalab](http://www.lib.berkeley.edu/libraries/data-lab)
 
