@@ -1613,4 +1613,16 @@ Sub DeleteSpecifcColumn()
 End Sub
 
 ```
-
+```
+Sub DeleteRows()
+    'get last row in column A
+    Last = Cells(Rows.Count, "D").End(xlUp).Row
+    For i = Last To 1 Step -1
+        'if cell value is less than 100
+        If (Cells(i, "D").Value) < 1968 Then
+            'delete entire row
+            Cells(i, "D").EntireRow.Delete
+        End If
+    Next i
+End Sub
+```
