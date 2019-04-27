@@ -15,7 +15,10 @@ IV. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position 
 3. when called without arguments, getters (returning the current value of the property).
 4. To entirely remove a property, call the appropriate setter with `null` as argument.
 
-### Conventions: Naming
+### Style Conventions (use svg NOT css. fill, not color)
+[MDN SVG Attr Ref](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
+
+### Naming Conventions
 #### src: D3 for the impatient
 
 First-letter acronyms for individual objects: c for “circle”, p for point, and so on. Append an “s” for collections: cs will be an array of circles, ps an array of points.
