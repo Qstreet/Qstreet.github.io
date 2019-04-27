@@ -1080,6 +1080,8 @@ return svg.node();
 > nice list of refs
 
 ### Good Old APIs
+[Programmable Web Monster API List and tutorials](https://www.programmableweb.com/category/all/apis)
+
 [Open Weather Map](https://openweathermap.org/)
 
 [FIND A GOOD BASIC MARKETS API](#)
