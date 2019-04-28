@@ -1026,7 +1026,8 @@ return svg.node();
 ### Videos
 [Hands-On Data Visualization with D3.js 5.0](https://learning.oreilly.com/videos/hands-on-data-visualization/9781789340594/9781789340594-video3_3)
 
-
+### Data Standards and Quality
+[International Aid Transparency Initiative IATI](https://iatistandard.org/en/)
 
 ### Reads
 [Political Violence at a Glance](http://politicalviolenceataglance.org/)
