@@ -964,6 +964,8 @@ bigG.append('text')
 [AirBnB](https://github.com/airbnb/javascript)
 
 [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+[MDN js Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 ### ObservableHQ
 #### DOM.svg
 alias for `document.createElementNS;`
