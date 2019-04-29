@@ -1102,6 +1102,8 @@ return svg.node();
 
 [Economist Data Unit](http://data.eiu.com)
 
+[Economist Intel Unit](http://www.eiu.com/)
+
 [Correlates of War](http://correlatesofwar.org/)
 
 [Population Counter Age Stats](https://population.io/)
