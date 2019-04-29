@@ -1036,7 +1036,7 @@ return svg.node();
 
 ### d3
 
-[D# Tips and Tricks Leanpub](https://leanpub.com/D3-Tips-and-Tricks/read)
+[D# Tips and Tricks v4 Leanpub](https://leanpub.com/d3-t-and-t-v4/read)
 
 [Understanding the SVG Coord System](https://www.sarasoueidan.com/blog/svg-coordinate-systems/)
 
