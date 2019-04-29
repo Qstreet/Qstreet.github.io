@@ -1003,7 +1003,7 @@ return svg.node();
 <script src="https://unpkg.com/d3-geo-scale-bar@0.2.0/build/d3-geo-scale-bar.js"></script>
 ```
 
-## REFS
+## References
 ### Storytelling
 [Story Telling Best Pracs](https://pudding.cool/process/responsive-scrollytelling/)
 
