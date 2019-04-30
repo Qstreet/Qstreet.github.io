@@ -1243,6 +1243,11 @@ return svg.node();
 [USGS Earthquake Coding Challenge](https://www.youtube.com/watch?v=ZiYdOwOrGyc)
 
 ### Utilites and Helper Sites
+
+[Nest Tutorial](http://bl.ocks.org/phoebebright/raw/3176159/)
+
+[Mister Nester](http://bl.ocks.org/shancarter/raw/4748131/)
+
 [Modernizr HTML CSS JS a user browser supports](https://modernizr.com/)
 
 [OGRE Converter](http://ogre.adc4gis.com/)
