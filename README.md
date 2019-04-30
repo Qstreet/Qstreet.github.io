@@ -1085,6 +1085,8 @@ return svg.node();
 [Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
 
 ### Data
+[AfroBarometer](http://afrobarometer.org)
+
 [Health Resources and Services Administration](https://data.hrsa.gov/)
 
 [USAID api](http://api.dhsprogram.com/#/index.html)
