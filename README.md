@@ -1069,8 +1069,10 @@ return svg.node();
 
 [js Code Readability](https://www.codereadability.com/)
 
-### d3 examples
 #### v5 Demos
+##### Line Charts
+[Bostock City Swap](https://bl.ocks.org/mbostock/3903818)
+
 [Updating Lines and Y axis](http://jonsadka.com/blog/how-to-create-live-updating-and-flexible-d3-line-charts-using-d3-js-v5-and-pseudo-data)
 
 [good v5 w exercises](https://github.com/sgratzl/d3tutorial#d3-data-join)
@@ -1195,6 +1197,9 @@ return svg.node();
 [Open Refine Links](http://kb.refinepro.com/search/label/data%20exploration)
 
 ### Design
+
+[Data To Viz massive list of demos](https://www.data-to-viz.com/graph/line.html)
+
 [WSJ Graphics](https://graphics.wsj.com/)
 
 [Sunlight DataVis Style Guide](https://github.com/amycesal/dataviz-style-guide/blob/master/Sunlight-StyleGuide-DataViz.pdf)
