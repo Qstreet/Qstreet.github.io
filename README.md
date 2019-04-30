@@ -1281,6 +1281,8 @@ return svg.node();
 
 ## Shapfiles and GeoJson
 
+[CGIAR CSI Constorium fore Spatial Info](https://cgiarcsi.community/)
+
 [Geonames Database](http://www.geonames.org/)
 
 [Europa Maps](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)
