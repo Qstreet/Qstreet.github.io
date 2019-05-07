@@ -1266,6 +1266,8 @@ return svg.node();
 
 ### Utilites and Helper Sites
 
+[Geo Names geographical database](http://www.geonames.org/)
+
 [Nest Tutorial](http://bl.ocks.org/phoebebright/raw/3176159/)
 
 [Mister Nester](http://bl.ocks.org/shancarter/raw/4748131/)
@@ -1293,8 +1295,6 @@ return svg.node();
 ## Shapfiles and GeoJson
 
 [CGIAR CSI Constorium fore Spatial Info](https://cgiarcsi.community/)
-
-[Geonames Database](http://www.geonames.org/)
 
 [Europa Maps](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)
 
