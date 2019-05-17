@@ -1018,6 +1018,8 @@ return svg.node();
 
 [European Journalism Center](https://ejc.net/)
 
+[Google News Initiative](https://newsinitiative.withgoogle.com/)
+
 ### javascript
 [Eloquent Javascript](http://eloquentjavascript.net/)
 
