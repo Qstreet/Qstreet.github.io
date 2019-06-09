@@ -1,4 +1,6 @@
 # d3Projects
+copied from BEAR 2019-06-09
+
 **REMEMBER: d3 is a DOM manipulation library!**
 
 1. [References](https://github.com/Qstreet/d3/blob/master/README.md#references)
