@@ -7,6 +7,7 @@ copied from BEAR 2019-06-09
 2. [JavaScript](https://github.com/Qstreet/d3/blob/master/README.md#javascript)
 3. [Scales](https://github.com/Qstreet/d3/blob/master/README.md#scales)
 4. [Date-Time](https://github.com/Qstreet/d3/blob/master/README.md#datetime)
+5. [Snippets]
 
 ## Eureka!
 1. The outer `<svg>` must have a H x W defined somewhere
@@ -115,6 +116,16 @@ The second argument of .then is a function that:
 Cross-domain scripting with JSONP
 
 ## SNIPPETS
+### Random T/F
+```
+// Double negation
+!!Math.floor(Math.random() * 2);
+```
+```
+// Boolean() constructor
+Boolean(Math.floor(Math.random() * 2));
+```
+
 ### Grid Lines Horiz and Vert
 ```
 chart.append('g')
