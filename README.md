@@ -116,7 +116,7 @@ The second argument of .then is a function that:
 Cross-domain scripting with JSONP
 
 ## SNIPPETS
-### Random T/F
+### Random Boolean T/F
 ```
 // Double negation
 !!Math.floor(Math.random() * 2);
