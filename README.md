@@ -18,6 +18,12 @@ copied from BEAR 2019-06-09
 7. You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
 8. *Parse* converts a string to a JS date obj `parseTime = d3.timeParse("%m/%d/%y")`
 9. *Format* converts a JS date obj back to a string for display `formatTime = d3.timeFormat("%b %e")`
+10. Scales return values; Axes are functions into which scales are passed and return svg shapes to be placed on the screen
+`xAxis = d3.axisBottom(xScale).ticks(5);` `mainSvg.append('g').call(xAxis)`
+11. svg.append("g")
+    	.attr("class", "axis")
+    	.attr("transform", "translate(0," + (h - 10) + ")")
+    	.call(xAxis);
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
