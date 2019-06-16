@@ -15,7 +15,7 @@ copied from BEAR 2019-06-09
 4. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
 5. Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom
 6. To transition anything, it must have had a previous state from which to transition.
-7. You cannot add an <html> element to SVG. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
+7. You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
 
 
 ## Conventions
