@@ -112,8 +112,6 @@ The second argument of .then is a function that:
 ### CORS-header ‘Access-Control-Allow-Origin
 Cross-domain scripting with JSONP
 
-
-
 ## SNIPPETS
 ### Grid Lines Horiz and Vert
 ```
@@ -1003,7 +1001,6 @@ bigG.append('text')
   .text("Words Left of the Y axis")
 ~~~
 
-
 ## Javascript
 ### Guides
 [Google](https://google.github.io/styleguide/jsguide.html)
@@ -1113,6 +1110,9 @@ return svg.node();
 [River DataWrapper](https://river.datawrapper.de/)
 
 ### D3
+#### MDN svg elements (vs css)
+[svg elements](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
+
 #### v4
 [D# Tips and Tricks v4 Leanpub](https://leanpub.com/d3-t-and-t-v4/read)
 
