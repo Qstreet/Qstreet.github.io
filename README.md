@@ -13,7 +13,8 @@ copied from BEAR 2019-06-09
 2. Circles should always be scaled by area, not by radius value
 3. Select an element in the DOM, then append an svg to it
 4. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
-5. Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom    
+5. Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom
+6. To transition anything, it must have had a previous state from which to transition.
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
