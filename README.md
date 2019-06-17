@@ -1483,6 +1483,49 @@ returns getJson object from Topojson encoded file
 Returns the GeoJSON Feature or FeatureCollection for the specified object in the given topology. If the specified object is a GeometryCollection, a FeatureCollection is returned, and each geometry in the collection is mapped to a Feature. Otherwise, a Feature is returned. The returned feature is a shallow copy of the source object: they may share identifiers, bounding boxes, properties and coordinates.
 
 ## D3 Update Pattern
+### Theory
+1. select
+2. data
+3. exit
+4. update
+5. enter
+6. append
+
+#### Select
+assign the result of the select state
+
+const circles = svg.selectAll('circle')
+
+#### Data
+chain the data command to the circles. Bind the data to the circles
+
+.data(dataset);
+
+#### Exit
+return all the circles that are on the screen, but not in the data set.
+
+circles.exit().remove();
+
+#### Update
+Update the circles that are on the screen with the new data set.
+
+circles
+.attr('cy', d => height - d.rainfall * 10);
+
+#### Enter
+Get the circles that are in the data set, but not on the screen
+
+circles.enter()
+
+#### Append
+Draw the circles that are in the data set, but not on the screen.
+
+circles.enter()
+    .append('circle')
+    .attr('cy', d => height - d.rainfall * 10)
+    .attr('cx', (d, i) => i * 80)
+    .attr('r', 5);
+
 
 ### Interval fn to loop code with flag
 #### flag variable
