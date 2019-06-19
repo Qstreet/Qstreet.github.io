@@ -41,7 +41,7 @@ copied from BEAR 2019-06-09
 [MDN SVG Attr Ref](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
 
 ### Naming Conventions
-#### src: D3 for the impatient
+#### d
 d indicates “the current thing” in anonymous functions. When working with D3 selections, d is usually an individual data point bound to a DOM element; when working with arrays, d is an array element `ds.map( d => +d ))`.
 
 Data sets are called data or ds.
