@@ -1487,49 +1487,66 @@ returns getJson object from Topojson encoded file
 
 Returns the GeoJSON Feature or FeatureCollection for the specified object in the given topology. If the specified object is a GeometryCollection, a FeatureCollection is returned, and each geometry in the collection is mapped to a Feature. Otherwise, a Feature is returned. The returned feature is a shallow copy of the source object: they may share identifiers, bounding boxes, properties and coordinates.
 
-## D3 Update Pattern
-### Theory
-1. select
-2. data
-3. exit
-4. update
-5. enter
-6. append
+## D3 Update Pattern b. 2019-06-30
+*bind*
+When D3 binds data to an element, that data doesn’t exist in the DOM, but it does exist in memory as a __data__ attribute of that element.
 
-#### Select
+*.select() .selectAll()*
+Selection is a collection of nodes that may/may not yet exist.
 assign the result of the select state
+const circles = svg.selectAll(‘circle’)
+Same  as vanJS   `document.querySelectorAll(‘div’)`
 
-const circles = svg.selectAll('circle')
-
-#### Data
+*.data()*
+.a D3 method for associating an array of data with elements that we intend to attach to the screen.
+.data(dataset) passes in our array of elements to our D3 selection which we will append to the screen via.enter()
 chain the data command to the circles. Bind the data to the circles
-
 .data(dataset);
+To bind data, .data() needs 1. Data  2. A selection of DOM elements.
 
-#### Exit
-return all the circles that are on the screen, but not in the data set.
+binds array of data to selected elements, returning a new selection which is the update selection.
+also defines the enter and exit selections on the returned selection
+data assigned to an element is stored in __data__ property making it ‘sticky’ and available for re-selection
 
+when D3 binds data to an element, that data doesn’t exist in the DOM, but it does exist in memory as a __data__ attribute of that element
+
+*.exit()*
+return all the circles that are on the screen (in the DOM), but not in the data set.
 circles.exit().remove();
 
-#### Update
-Update the circles that are on the screen with the new data set.
+*.update()*
+Update the circles that are both on the screen within the new data set.
+circles .attr(‘cy’, d => height - d.rainfall * 10);
 
-circles
-.attr('cy', d => height - d.rainfall * 10);
-
-#### Enter
-Get the circles that are in the data set, but not on the screen
-
+*.enter()*
+Data that will define circles is in the dataset, but does not exist yet in DOM. It just prepares nodes (does not know if rect or circle)
+.enter() create new, data-bound elements
+This method looks at the current DOM selection (0 or more elements), and then at the data being handed to it.
+If there are more data values than corresponding DOM elements, enter() creates a new placeholder element for each.
+It then hands off a reference to this new placeholder to the next step in the chain.
+the update selection contains within it references to enter and exit subselections
+Entering elements are those that are new and not yet represented
+Whenever there are more data values than corresponding DOM elements, the enter selection contains references to those elements that do not yet exist.
 circles.enter()
 
-#### Append
+*.append()*
 Draw the circles that are in the data set, but not on the screen.
+.append(“rect”) Takes the empty placeholder selection created by enter() and appends a rect element into the DOM.
+Then it hands off a reference to the element it just created to the next step in the chain.
+append() creates whatever new DOM element you specify and appends it to the end (but just inside) of whatever selection it’s acting on.
+append() hands off a reference to the new element it just created
+circles.enter() .append(‘circle’) .attr(‘cy’, d => height - d.rainfall * 10) .attr(‘cx’, (d, i) => I * 80) .attr(‘r’, 5);
 
-circles.enter()
-    .append('circle')
-    .attr('cy', d => height - d.rainfall * 10)
-    .attr('cx', (d, i) => i * 80)
-    .attr('r', 5);
+*.call()*
+D3’s call() function takes the incoming selection, as received from the prior link in the chain, and hands that selection off to any function.
+selection.call always returns the selection and not the return value of the called function
+
+The *<use>* element takes nodes from within the SVG document, and duplicates them somewhere else.
+
+The *<defs>* element is used to store graphical objects that will be used at a later time. Objects created inside a <defs> element are not rendered directly. To display them you have to reference them (with a  [<use>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use)  element for example).
+
+
+
 
 
 ### Interval fn to loop code with flag
