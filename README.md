@@ -1171,6 +1171,11 @@ return svg.node();
 [Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
 
 ### Data Sources
+#### Economic Data
+[OEC (World Trade)](https://atlas.media.mit.edu/en/resources/data/)
+
+#### General Data
+
 [Electoral Contention and Violence](https://ecavdata.org/)
 
 [Social Conflict Analysis Database (SCAD)](https://www.strausscenter.org/scad.html)
