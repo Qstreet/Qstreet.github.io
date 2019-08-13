@@ -1175,6 +1175,8 @@ return svg.node();
 [Open Exchange Rates](https://openexchangerates.org/)
 
 [Exchange Rate InforEuro](https://ec.europa.eu/budget/graphs/inforeuro.html)
+;one
+:two
 
 [Eur Cent Bank](http://sdw.ecb.europa.eu/browse.do?node=9691296)
 
