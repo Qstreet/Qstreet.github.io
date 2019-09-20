@@ -37,10 +37,9 @@ svg.append("g")
 * const arrowFn = d => d.temp  return is included. must include RETURN with non-arrow functions
 * d3.selection() methods return a selection object which are a subclass of Array
 * .attr() to set fill as an attribute for example, has a lower CSS precedence than linked stylesheets, which will let us overwrite the value. Setting .style() on the otherhand sets an inline style which would require an !important CSS declaration to override.
+* d3 selections have a .call() method that executes the provided function with the selection as the first parameter.
+We can use .call() to: prevent saving our selection as a variable, and preserve the selection for additional chaining.
 
-Excerpt From: Nate Murray. “Fullstack Data Visualization with D3.” Apple Books. 
-
-Excerpt From: Nate Murray. “Fullstack Data Visualization with D3.” Apple Books. 
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
